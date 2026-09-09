@@ -1,0 +1,30 @@
+<h2>Order list</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Order Id:</th>
+        <th>No of Product:</th>
+        <th>Total Price:</th>
+        <th>Order Date:</th>
+        <th>Delivery Date:</th>
+        <th>Seller:</th>
+        <th>Delivered:</th>
+        <th>Status:</th>
+       <!--<th>Actions:</th>-->
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let order of orders">
+        <td>{{order.orderId}}</td>
+        <td>{{order.noOfProducts}}</td>
+        <td>{{order.totalprice}}</td>
+        <td>{{order.bookingDate}}</td>
+        <td>{{order.deliveryDate}}</td>
+        <td>{{order.seller}}</td>
+        <td>{{order.delivered}}</td>
+        <td>{{order.status}}</td>
+        <!--<td><button (click)="cancelProduct(order.orderId)" class="btn btn-info">Cancel Product</button></td>-->
+        <!--<td><button (click)="deleteCustomer(customer.customerId)" class="btn btn-danger">Delete</button></td>-->
+    </tr>
+</tbody>
+</table>

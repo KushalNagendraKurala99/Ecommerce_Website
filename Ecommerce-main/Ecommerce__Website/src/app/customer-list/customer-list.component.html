@@ -1,0 +1,26 @@
+<h2>Customer list</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>customerName:</th>
+        <th>age:</th>
+        <th>gender:</th>
+        <th>email:</th>
+        <th>phno:</th>
+        <th>address:</th>
+        <th>Actions:</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let customer of customers">
+        <td>{{customer.customerName}}</td>
+        <td>{{customer.age}}</td>
+        <td>{{customer.gender}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.phno}}</td>
+        <td>{{customer.address}}</td>
+        <td><button (click)="updateCustomer(customer.customerId)" class="btn btn-info">Edit</button></td>
+        <td><button (click)="deleteCustomer(customer.customerId)" class="btn btn-danger">Delete</button></td>
+    </tr>
+</tbody>
+</table>

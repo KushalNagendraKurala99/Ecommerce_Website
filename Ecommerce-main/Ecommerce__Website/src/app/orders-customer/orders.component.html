@@ -1,0 +1,47 @@
+<div class="col-md-6 offset-md-3">
+    <br>
+
+<h3>Search Orders</h3>
+
+<form >
+    <div class="form-group">
+        <label>customer Id:</label>
+        <input type="text" class="form-control" id="customerId"
+        [(ngModel)] = "customerId" name="customerId">
+    </div>
+    <br>
+    <td><button (click)="getOrdersByCustomerId(customerId)" class="btn btn-info">Search</button></td>
+    
+
+</form>
+</div>
+<h2>Order list</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Order Id:</th>
+        <th>No of Product:</th>
+        <th>Total Price:</th>
+        <th>Order Date:</th>
+        <th>Delivery Date:</th>
+        <th>Seller:</th>
+        <th>Delivered:</th>
+        <th>Status:</th>
+       <!--<th>Actions:</th>-->
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let order of orderss">
+        <td>{{order.orderId}}</td>
+        <td>{{order.noOfProducts}}</td>
+        <td>{{order.totalprice}}</td>
+        <td>{{order.bookingDate}}</td>
+        <td>{{order.deliveryDate}}</td>
+        <td>{{order.seller}}</td>
+        <td>{{order.delivered}}</td>
+        <td>{{order.status}}</td>
+        <!--<td><button (click)="updateCustomer(customer.customerId)" class="btn btn-info">Edit</button></td>-->
+        <!--<td><button (click)="deleteCustomer(customer.customerId)" class="btn btn-danger">Delete</button></td>-->
+    </tr>
+</tbody>
+</table>

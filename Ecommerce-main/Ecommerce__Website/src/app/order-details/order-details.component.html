@@ -1,0 +1,73 @@
+<div class="col-md-6 offset-md-3">
+    <br>
+
+<h3>Order Details Form!</h3>
+<br>
+    <!--<form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="form-group">
+            <label>Product No: </label>
+            <input type="number" class="form-control" id="productNo" [(ngModel)]="productNo" name="productNo">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Customer ID:</label>
+            <input type="number" class="form-control" id="customerId" [(ngModel)]="customerId" name="customerId">
+        </div>
+        <br>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    <div *ngIf="isOrdered">-->
+
+<form (ngSubmit) ="onSubmit()">
+    <div class="form-group">
+        <label>Product No: </label>
+        <input type="number" class="form-control" id="productNo" [(ngModel)]="productNo" name="productNo">
+    </div>
+    <br>
+    <div class="form-group">
+        <label>Customer ID:</label>
+        <input type="number" class="form-control" id="customerId" [(ngModel)]="customerId" name="customerId">
+    </div>
+    <br>
+
+    <div class="form-group">
+        <label>Number of Products:</label>
+        <input type="text" class="form-control" id="noOfProducts"
+        [(ngModel)] = "orders.noOfProducts" name="noOfProducts">
+    </div>
+
+    <div class="form-group">
+        <label>Booking Date:</label>
+        <input type="date" class="form-control" id="bookingDate"
+        [(ngModel)] = "orders.bookingDate" name="bookingDate">
+    </div>
+
+    <div class="form-group">
+        <label>DeliveryDate:</label>
+        <input type="date" class="form-control" id="deliveryDate"
+        [(ngModel)] = "orders.deliveryDate" name="deliveryDate">
+    </div>
+
+    <div class="form-group">
+        <label>Seller:</label>
+        <input type="text" class="form-control" id="seller"
+        [(ngModel)] = "orders.seller" name="seller">
+    </div>
+
+    <div class="form-group">
+        <label>Delivered:</label>
+        <input type="text" class="form-control" id="delivered"
+        [(ngModel)] = "orders.delivered" name="delivered">
+    </div>
+
+    
+
+    <br>
+    <!--<button class="btn btn-success" type="submit">Submit</button>-->
+    <button (click)="orderProduct()">Order Now</button>
+
+
+
+</form>
+<!--<div *ngIf="isOrdered">
+</div>-->

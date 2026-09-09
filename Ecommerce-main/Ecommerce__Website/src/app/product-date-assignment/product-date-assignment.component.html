@@ -1,0 +1,22 @@
+<div class="col-md-6 offset-md-3">
+    <br>
+    <br>
+    <h4>Assigning Dateslot to Product</h4>
+    <br>
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="form-group">
+            <label>Product Id: </label>
+            <input type="number" class="form-control" id="productId" [(ngModel)]="productId" name="productId">
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Dateslot ID:</label>
+            <input type="number" class="form-control" id="dateslotId" [(ngModel)]="dateslotId" name="dateslotId">
+        </div>
+        <br>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+    <div *ngIf="isAssignment">
+    {{ message}}</div>
+</div>

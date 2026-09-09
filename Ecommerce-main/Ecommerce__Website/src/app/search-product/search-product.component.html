@@ -1,0 +1,44 @@
+<div class="col-md-6 offset-md-3">
+    <br>
+
+<h3>Search Product!</h3>
+
+<form >
+    <div class="form-group">
+        <label>Category:</label>
+        <input type="text" class="form-control" id="category"
+        [(ngModel)] = "category" name="category">
+    </div>
+
+   
+    
+    <br>
+    <button (click)="searchProduct(category)" class="btn btn-info">Search</button>
+
+</form>
+</div>
+
+<h2>Product list</h2>
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>ProductName:</th>
+        <th>price:</th>
+        <th>category:</th>
+        <th>brand:</th>
+        <th>availableproduct:</th>
+        <th>Actions:</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let product of products">
+        <td>{{product.productName}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.brand}}</td>
+        <td>{{product.availableproduct}}</td>
+        <td><button (click)="orderProduct()" class="btn btn-info">Edit</button></td>
+       <!-- <td><button (click)="deleteProduct(product.productId)" class="btn btn-danger">Delete</button></td>-->
+    </tr>
+</tbody>
+</table>
